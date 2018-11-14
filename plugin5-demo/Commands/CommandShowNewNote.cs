@@ -26,12 +26,10 @@ namespace plugin5_demo.Commands
                 Aliquo.Core.Models.Note note = new Aliquo.Core.Models.Note();
 
                 // This is the basic information to create a note
-                note.Type = Aliquo.Core.NoteType.SalesDeliveryNote;
+                note.Type = Aliquo.Core.NoteType.SalesOrder;
 
                 // Show the window with the model 
                 sender.Documents.Views.AddNote(note);
-
-                e.View.Refresh();
 
             }
             catch (Exception ex)
