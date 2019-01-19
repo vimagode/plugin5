@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Commands\CommandCreateWithWizard.cs" />
     <Compile Include="Commands\CommandCreateNewNote.cs" />
+    <Compile Include="Commands\CommandSendNoteByPDF.cs" />
     <Compile Include="Commands\CommandShowNewNote.cs" />
     <Compile Include="Process\ProcessCreateWithWizard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

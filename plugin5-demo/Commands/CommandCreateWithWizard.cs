@@ -8,9 +8,11 @@ namespace plugin5_demo.Commands
 {
 
     [Export(typeof(Command))]
-    [CommandItemMetadata(ViewType = ViewType.SalesDeliveryNote, CommandSize = CommandSize.Middle, Text = "Create with wizard")]
+    [CommandItemMetadata(ViewType = ViewType.SalesOrder, CommandSize = CommandSize.Middle, Text =PlugInTitle)]
     class CommandCreateWithWizard : Command
     {
+
+        private const string PlugInTitle = "Create with wizard";
 
         public CommandCreateWithWizard()
         {
@@ -29,7 +31,7 @@ namespace plugin5_demo.Commands
             }
             catch (HandledException ex)
             {
-                Message.Show(ex.Message, "Create with wizard", MessageImage.Warning);
+                Message.Show(ex.Message, PlugInTitle, MessageImage.Warning);
             }
             catch (Exception ex)
             {

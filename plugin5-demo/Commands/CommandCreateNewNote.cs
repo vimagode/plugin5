@@ -8,7 +8,7 @@ namespace plugin5_demo.Commands
 {
 
     [Export(typeof(Command))]
-    [CommandItemMetadata(ViewType = ViewType.SalesDeliveryNote, CommandSize = CommandSize.Large, Text = "Create new document", CommandType = CommandType.QuickAction, ViewStyle = ViewStyle.List)]
+    [CommandItemMetadata(ViewType = ViewType.SalesOrder, CommandSize = CommandSize.Large, Text = "Create new document", CommandType = CommandType.QuickAction, ViewStyle = ViewStyle.List)]
     class CommandCreateNewNote : Command
     {
 
@@ -30,7 +30,7 @@ namespace plugin5_demo.Commands
                 note.Lines = new List<Aliquo.Core.Models.Line>();
 
                 // This is the basic information to create a note
-                note.Type = Aliquo.Core.NoteType.SalesDeliveryNote;
+                note.Type = Aliquo.Core.NoteType.SalesOrder;
                 note.PropertyCode = "001";
 
                 Aliquo.Core.Models.Line line = new Aliquo.Core.Models.Line
